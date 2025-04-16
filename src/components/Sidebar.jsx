@@ -21,8 +21,6 @@ export const Sidebar = () => {
   const [open1, setOpen1] = useState(false);
   const [open2, setOpen2] = useState(false);
 
-  const [isCollapsed, setIsCollapsed] = useState(false);
-
   const handleClick = () => {
     setOpen(!open);
   };
@@ -37,11 +35,11 @@ export const Sidebar = () => {
     <Drawer
       variant="permanent"
       sx={{
-        width: isCollapsed ? 70 : 292,
+        width: 292,
         flexShrink: 0,
 
         "& .MuiDrawer-paper": {
-          width: isCollapsed ? 70 : 292,
+          width: 292,
           boxSizing: "border-box",
           border: "none",
           scrollbarWidth: "none",
@@ -54,24 +52,6 @@ export const Sidebar = () => {
         },
       }}
     >
-      {/* {isCollapsed && (
-        <Box
-          display="flex"
-          justifyContent="flex-end"
-          alignItems="center"
-          sx={{ px: 1, pt: 1 }}
-        >
-          <IconButton onClick={toggleSidebar}>
-            {isCollapsed ? (
-              <KeyboardDoubleArrowLeftIcon
-                style={{ transform: "rotate(180deg)" }}
-              />
-            ) : (
-              <KeyboardDoubleArrowLeftIcon />
-            )}
-          </IconButton>
-        </Box>
-      )} */}
       <Box
         sx={{
           display: "flex",
@@ -144,7 +124,6 @@ export const Sidebar = () => {
                       sx: {
                         fontSize: "16px",
                         fontWeight: 800,
-                        fontFamily: "Raleway",
                         fontFamily: "Raleway",
                       },
                     }}
